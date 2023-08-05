@@ -1,0 +1,4 @@
+﻿  mainwindow.cpp
+mainwindow.cpp(54): warning C4551: 缺少参数列表的函数调用
+  CountNumbersDemo.vcxproj -> D:\Qt_learning\CountNumbersDemo\debug\CountNumbersDemo.exe
+  CountNumbersDemo.vcxproj -> debug\CountNumbersDemo.pdb (Full PDB)
