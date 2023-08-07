@@ -27,5 +27,7 @@ public:
 private:
 	QVector<CountBase*> m_countbase;
 
+
+
 };
 

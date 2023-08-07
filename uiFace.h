@@ -19,9 +19,10 @@ public:
 	virtual void listenMessage(const QString &mes, QVariant &data) override;
 
     void DoStart();
-
+	int returnNumber();
 
 private:
 	QString countName;
+	int m_countnumber;
 };
 

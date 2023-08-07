@@ -18,6 +18,8 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -47,6 +49,45 @@ public:
     QWidget *tab_3;
     QWidget *tab;
     QWidget *tab_2;
+    QVBoxLayout *verticalLayout_3;
+    QWidget *widget_6;
+    QCheckBox *checkBox_2;
+    QWidget *widget_8;
+    QVBoxLayout *verticalLayout_5;
+    QWidget *widget_7;
+    QVBoxLayout *verticalLayout_4;
+    QRadioButton *radioButton;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer;
+    QComboBox *comboBox_2;
+    QLineEdit *lineEdit_2;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *label_3;
+    QLineEdit *lineEdit_3;
+    QWidget *widget_10;
+    QVBoxLayout *verticalLayout_6;
+    QRadioButton *radioButton_2;
+    QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_3;
+    QComboBox *comboBox_3;
+    QLineEdit *lineEdit_4;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_4;
+    QLabel *label_4;
+    QLineEdit *lineEdit_5;
+    QWidget *widget_9;
+    QVBoxLayout *verticalLayout_7;
+    QWidget *widget_11;
+    QVBoxLayout *verticalLayout_9;
+    QRadioButton *radioButton_3;
+    QHBoxLayout *horizontalLayout_9;
+    QHBoxLayout *horizontalLayout_10;
+    QWidget *widget_12;
+    QVBoxLayout *verticalLayout_8;
+    QRadioButton *radioButton_4;
+    QHBoxLayout *horizontalLayout_11;
+    QHBoxLayout *horizontalLayout_12;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_5;
@@ -62,7 +103,7 @@ public:
     {
         if (MaterialManageDialog->objectName().isEmpty())
             MaterialManageDialog->setObjectName(QString::fromUtf8("MaterialManageDialog"));
-        MaterialManageDialog->resize(719, 602);
+        MaterialManageDialog->resize(787, 560);
         verticalLayout = new QVBoxLayout(MaterialManageDialog);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         widget = new QWidget(MaterialManageDialog);
@@ -152,7 +193,7 @@ public:
 
         widget_5 = new QWidget(widget_2);
         widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setMaximumSize(QSize(200, 16777215));
+        widget_5->setMaximumSize(QSize(300, 16777215));
         verticalLayout_2 = new QVBoxLayout(widget_5);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, -1, 0, -1);
@@ -166,6 +207,186 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        verticalLayout_3 = new QVBoxLayout(tab_2);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        widget_6 = new QWidget(tab_2);
+        widget_6->setObjectName(QString::fromUtf8("widget_6"));
+        widget_6->setMaximumSize(QSize(16777215, 40));
+        checkBox_2 = new QCheckBox(widget_6);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setGeometry(QRect(30, 10, 131, 19));
+
+        verticalLayout_3->addWidget(widget_6);
+
+        widget_8 = new QWidget(tab_2);
+        widget_8->setObjectName(QString::fromUtf8("widget_8"));
+        verticalLayout_5 = new QVBoxLayout(widget_8);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, -1, 0, -1);
+        widget_7 = new QWidget(widget_8);
+        widget_7->setObjectName(QString::fromUtf8("widget_7"));
+        verticalLayout_4 = new QVBoxLayout(widget_7);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        radioButton = new QRadioButton(widget_7);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+
+        verticalLayout_4->addWidget(radioButton);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer);
+
+        comboBox_2 = new QComboBox(widget_7);
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+
+        horizontalLayout_4->addWidget(comboBox_2);
+
+        lineEdit_2 = new QLineEdit(widget_7);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+
+        horizontalLayout_4->addWidget(lineEdit_2);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_4);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_2);
+
+        label_3 = new QLabel(widget_7);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_5->addWidget(label_3);
+
+        lineEdit_3 = new QLineEdit(widget_7);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+
+        horizontalLayout_5->addWidget(lineEdit_3);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_5);
+
+
+        verticalLayout_5->addWidget(widget_7);
+
+        widget_10 = new QWidget(widget_8);
+        widget_10->setObjectName(QString::fromUtf8("widget_10"));
+        verticalLayout_6 = new QVBoxLayout(widget_10);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        radioButton_2 = new QRadioButton(widget_10);
+        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+
+        verticalLayout_6->addWidget(radioButton_2);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_3);
+
+        comboBox_3 = new QComboBox(widget_10);
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
+        comboBox_3->setMaximumSize(QSize(50, 16777215));
+
+        horizontalLayout_8->addWidget(comboBox_3);
+
+        lineEdit_4 = new QLineEdit(widget_10);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+
+        horizontalLayout_8->addWidget(lineEdit_4);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_8);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_4);
+
+        label_4 = new QLabel(widget_10);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        horizontalLayout_6->addWidget(label_4);
+
+        lineEdit_5 = new QLineEdit(widget_10);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+
+        horizontalLayout_6->addWidget(lineEdit_5);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_6);
+
+
+        verticalLayout_5->addWidget(widget_10);
+
+
+        verticalLayout_3->addWidget(widget_8);
+
+        widget_9 = new QWidget(tab_2);
+        widget_9->setObjectName(QString::fromUtf8("widget_9"));
+        verticalLayout_7 = new QVBoxLayout(widget_9);
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
+        widget_11 = new QWidget(widget_9);
+        widget_11->setObjectName(QString::fromUtf8("widget_11"));
+        verticalLayout_9 = new QVBoxLayout(widget_11);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        verticalLayout_9->setContentsMargins(0, 0, 0, 0);
+        radioButton_3 = new QRadioButton(widget_11);
+        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+
+        verticalLayout_9->addWidget(radioButton_3);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+
+        verticalLayout_9->addLayout(horizontalLayout_9);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+
+        verticalLayout_9->addLayout(horizontalLayout_10);
+
+
+        verticalLayout_7->addWidget(widget_11);
+
+        widget_12 = new QWidget(widget_9);
+        widget_12->setObjectName(QString::fromUtf8("widget_12"));
+        verticalLayout_8 = new QVBoxLayout(widget_12);
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        radioButton_4 = new QRadioButton(widget_12);
+        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+
+        verticalLayout_8->addWidget(radioButton_4);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+
+        verticalLayout_8->addLayout(horizontalLayout_11);
+
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
+
+        verticalLayout_8->addLayout(horizontalLayout_12);
+
+
+        verticalLayout_7->addWidget(widget_12);
+
+
+        verticalLayout_3->addWidget(widget_9);
+
         tabWidget->addTab(tab_2, QString());
 
         verticalLayout_2->addWidget(tabWidget);
@@ -244,7 +465,7 @@ public:
 
         retranslateUi(MaterialManageDialog);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MaterialManageDialog);
@@ -263,6 +484,19 @@ public:
         pushButton_4->setText(QCoreApplication::translate("MaterialManageDialog", "\345\244\215\345\210\266\351\205\215\347\275\256", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MaterialManageDialog", "\350\257\206\345\210\253\350\256\276\347\275\256", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MaterialManageDialog", "\345\270\270\350\247\204\345\261\236\346\200\247", nullptr));
+        checkBox_2->setText(QCoreApplication::translate("MaterialManageDialog", "\345\220\257\347\224\250\351\253\230\347\272\247\347\211\271\345\276\201\347\272\240\351\224\231", nullptr));
+        radioButton->setText(QCoreApplication::translate("MaterialManageDialog", "\345\256\275\351\225\277\346\257\224", nullptr));
+        comboBox_2->setItemText(0, QCoreApplication::translate("MaterialManageDialog", "\345\244\247\344\272\216", nullptr));
+        comboBox_2->setItemText(1, QCoreApplication::translate("MaterialManageDialog", "\345\260\217\344\272\216", nullptr));
+
+        label_3->setText(QCoreApplication::translate("MaterialManageDialog", "\351\235\242\347\247\257\350\241\245\345\201\277", nullptr));
+        radioButton_2->setText(QCoreApplication::translate("MaterialManageDialog", "\347\237\251\345\275\242\345\272\246", nullptr));
+        comboBox_3->setItemText(0, QCoreApplication::translate("MaterialManageDialog", "\345\244\247\344\272\216", nullptr));
+        comboBox_3->setItemText(1, QCoreApplication::translate("MaterialManageDialog", "\345\260\217\344\272\216", nullptr));
+
+        label_4->setText(QCoreApplication::translate("MaterialManageDialog", "\351\235\242\347\247\257\350\241\245\345\201\277", nullptr));
+        radioButton_3->setText(QCoreApplication::translate("MaterialManageDialog", "\345\234\206\345\275\242\345\272\246", nullptr));
+        radioButton_4->setText(QCoreApplication::translate("MaterialManageDialog", "\345\201\217\345\277\203\347\216\207", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MaterialManageDialog", "\351\253\230\347\272\247\345\261\236\346\200\247", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MaterialManageDialog", "\345\257\274\345\205\245\345\233\276\345\203\217", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MaterialManageDialog", "\347\233\256\345\275\225\346\265\213\350\257\225", nullptr));
