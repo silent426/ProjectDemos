@@ -20,6 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -47,6 +48,14 @@ public:
     QVBoxLayout *verticalLayout_2;
     QTabWidget *tabWidget;
     QWidget *tab_3;
+    QVBoxLayout *verticalLayout_10;
+    QWidget *widget_13;
+    QVBoxLayout *verticalLayout_11;
+    QPushButton *binThreshold_Btn;
+    QLabel *label_5;
+    QSpinBox *binThreshold_spinBox;
+    QWidget *widget_14;
+    QWidget *widget_15;
     QWidget *tab;
     QWidget *tab_2;
     QVBoxLayout *verticalLayout_3;
@@ -97,7 +106,7 @@ public:
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
     QPushButton *pushButton_10;
-    QPushButton *pushButton_11;
+    QPushButton *completeSet_Btn;
 
     void setupUi(QDialog *MaterialManageDialog)
     {
@@ -201,6 +210,40 @@ public:
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
+        verticalLayout_10 = new QVBoxLayout(tab_3);
+        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
+        widget_13 = new QWidget(tab_3);
+        widget_13->setObjectName(QString::fromUtf8("widget_13"));
+        verticalLayout_11 = new QVBoxLayout(widget_13);
+        verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
+        binThreshold_Btn = new QPushButton(widget_13);
+        binThreshold_Btn->setObjectName(QString::fromUtf8("binThreshold_Btn"));
+
+        verticalLayout_11->addWidget(binThreshold_Btn);
+
+        label_5 = new QLabel(widget_13);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        verticalLayout_11->addWidget(label_5);
+
+        binThreshold_spinBox = new QSpinBox(widget_13);
+        binThreshold_spinBox->setObjectName(QString::fromUtf8("binThreshold_spinBox"));
+
+        verticalLayout_11->addWidget(binThreshold_spinBox);
+
+
+        verticalLayout_10->addWidget(widget_13);
+
+        widget_14 = new QWidget(tab_3);
+        widget_14->setObjectName(QString::fromUtf8("widget_14"));
+
+        verticalLayout_10->addWidget(widget_14);
+
+        widget_15 = new QWidget(tab_3);
+        widget_15->setObjectName(QString::fromUtf8("widget_15"));
+
+        verticalLayout_10->addWidget(widget_15);
+
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -220,6 +263,7 @@ public:
 
         widget_8 = new QWidget(tab_2);
         widget_8->setObjectName(QString::fromUtf8("widget_8"));
+        widget_8->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_5 = new QVBoxLayout(widget_8);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, -1, 0, -1);
@@ -452,12 +496,12 @@ public:
 
         horizontalLayout->addWidget(pushButton_10);
 
-        pushButton_11 = new QPushButton(widget_3);
-        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-        sizePolicy2.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
-        pushButton_11->setSizePolicy(sizePolicy2);
+        completeSet_Btn = new QPushButton(widget_3);
+        completeSet_Btn->setObjectName(QString::fromUtf8("completeSet_Btn"));
+        sizePolicy2.setHeightForWidth(completeSet_Btn->sizePolicy().hasHeightForWidth());
+        completeSet_Btn->setSizePolicy(sizePolicy2);
 
-        horizontalLayout->addWidget(pushButton_11);
+        horizontalLayout->addWidget(completeSet_Btn);
 
 
         verticalLayout->addWidget(widget_3);
@@ -465,7 +509,7 @@ public:
 
         retranslateUi(MaterialManageDialog);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MaterialManageDialog);
@@ -482,6 +526,8 @@ public:
         pushButton_2->setText(QCoreApplication::translate("MaterialManageDialog", "\345\244\215\345\210\266\351\205\215\347\275\256", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MaterialManageDialog", "\351\207\215\345\221\275\345\220\215", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MaterialManageDialog", "\345\244\215\345\210\266\351\205\215\347\275\256", nullptr));
+        binThreshold_Btn->setText(QCoreApplication::translate("MaterialManageDialog", "PushButton", nullptr));
+        label_5->setText(QCoreApplication::translate("MaterialManageDialog", "\344\272\214\345\200\274\351\230\210\345\200\274", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MaterialManageDialog", "\350\257\206\345\210\253\350\256\276\347\275\256", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MaterialManageDialog", "\345\270\270\350\247\204\345\261\236\346\200\247", nullptr));
         checkBox_2->setText(QCoreApplication::translate("MaterialManageDialog", "\345\220\257\347\224\250\351\253\230\347\272\247\347\211\271\345\276\201\347\272\240\351\224\231", nullptr));
@@ -505,7 +551,7 @@ public:
         pushButton_8->setText(QCoreApplication::translate("MaterialManageDialog", "\345\220\210\351\200\202", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MaterialManageDialog", "1:1", nullptr));
         pushButton_10->setText(QCoreApplication::translate("MaterialManageDialog", "\350\256\241\346\225\260\346\270\205\351\233\266", nullptr));
-        pushButton_11->setText(QCoreApplication::translate("MaterialManageDialog", "\345\256\214\346\210\220\350\256\276\345\256\232", nullptr));
+        completeSet_Btn->setText(QCoreApplication::translate("MaterialManageDialog", "\345\256\214\346\210\220\350\256\276\345\256\232", nullptr));
     } // retranslateUi
 
 };

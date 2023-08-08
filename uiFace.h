@@ -21,6 +21,8 @@ public:
     void DoStart();
 	int returnNumber();
 
+	void completeSet(QVariant &var);
+
 private:
 	QString countName;
 	int m_countnumber;

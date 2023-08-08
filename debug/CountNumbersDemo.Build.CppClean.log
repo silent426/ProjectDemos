@@ -1,13 +1,13 @@
-d:\qt_learning\countnumbersdemo\debug\countalgorithm.obj
+d:\qt_learning\countnumbersdemo\debug\main.obj
+d:\qt_learning\countnumbersdemo\debug\mainwindow.obj
 d:\qt_learning\countnumbersdemo\debug\uiface.obj
 d:\qt_learning\countnumbersdemo\debug\countbase.obj
-d:\qt_learning\countnumbersdemo\debug\mainwindow.obj
-d:\qt_learning\countnumbersdemo\debug\main.obj
+d:\qt_learning\countnumbersdemo\debug\countalgorithm.obj
 d:\qt_learning\countnumbersdemo\debug\countbasemanage.obj
 d:\qt_learning\countnumbersdemo\debug\materialmanagedialog.obj
-d:\qt_learning\countnumbersdemo\debug\vc140.pdb
 d:\qt_learning\countnumbersdemo\debug\moc_mainwindow.obj
 d:\qt_learning\countnumbersdemo\debug\moc_materialmanagedialog.obj
+d:\qt_learning\countnumbersdemo\debug\vc140.pdb
 d:\qt_learning\countnumbersdemo\ui_mainwindow.h
 d:\qt_learning\countnumbersdemo\ui_materialmanagedialog.h
 d:\qt_learning\countnumbersdemo\debug\moc_mainwindow.cpp

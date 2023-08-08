@@ -2,6 +2,7 @@
 #include <QString>
 #include <QVariant>
 #include <QDebug>
+#include <QMap>
 #include "CountBase.h"
 #include <QMainWindow>
 #include <HalconCpp.h>
@@ -24,10 +25,11 @@ public:
 	HObject QImage2HObject(QImage qimage);
 
     void DoStart();
+	void completeSet(QVariant &data);
 
 private:
 	QString countName;
-
+	QMap<QString, QVariant> qmap;
 	HTuple ho_Width, ho_Height;
 	HTuple ho_WindowID;
 	HObject ho_image;

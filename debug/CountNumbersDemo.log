@@ -1,10 +1,3 @@
 ﻿  CountAlgorithm.cpp
-  CountBase.cpp
-  CountBaseManage.cpp
-  main.cpp
-  uiFace.cpp
-CountBaseManage.cpp(29): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-CountBaseManage.cpp(30): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-main.cpp(9): warning C4189: “countalgorithm”: 局部变量已初始化但不引用
   CountNumbersDemo.vcxproj -> D:\Qt_learning\CountNumbersDemo\debug\CountNumbersDemo.exe
   CountNumbersDemo.vcxproj -> debug\CountNumbersDemo.pdb (Full PDB)

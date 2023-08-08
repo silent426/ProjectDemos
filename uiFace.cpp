@@ -45,4 +45,9 @@ int UiFace::returnNumber()
 	return m_countnumber;
 }
 
+void UiFace::completeSet(QVariant &var)
+{
+	notify("CountAlgorithm", "completeSet", var);
+}
+
 

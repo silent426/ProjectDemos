@@ -27,7 +27,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    MaterialManageDialog* d = new MaterialManageDialog(this);
+    MaterialManageDialog* d = new MaterialManageDialog(m_uiface,this);
     d->exec();
 
 }

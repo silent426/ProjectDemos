@@ -33,3 +33,14 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+INCLUDEPATH += $$PWD/include/halcon19_64
+
+LIBS += -L$$PWD/'../../Program Files/MVTec/HALCON-19.11-Progress/lib/x64-win64/'
+LIBS += -lhalcon \
+        -lhalconcpp \
+        -lhdevenginecpp
+
+INCLUDEPATH += $$PWD/'../../Program Files/MVTec/HALCON-19.11-Progress/include'
+DEPENDPATH += $$PWD/'../../Program Files/MVTec/HALCON-19.11-Progress/include'

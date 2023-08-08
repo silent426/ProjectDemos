@@ -28,6 +28,15 @@ void CountAlgorithm::listenMessage(const QString &mes, QVariant &data)
 		QImage qimage = data.value<QImage>();
 		notify("UiFace", "countNumber", QVariant::fromValue(countStart(qimage)));
 	}
+	if (mes == "completeSet")
+	{
+		//QMap<QString, int> qmap = .toMap();
+		// Êä³ö 
+		completeSet(data);
+		qDebug() << data.toMap().value("binThreshold").toInt();
+		
+		
+	}
 
 }
 
@@ -54,91 +63,6 @@ HObject CountAlgorithm::QImage2HObject(QImage qimage)
 		GenImage1(&hv_image, "byte", width, height, (Hlong)qimage.bits());
 	}
 	return hv_image;
-}
-
-int CountAlgorithm::QImageToHOjbect(QImage &image, HObject *Object)
-{
-	if (image.format() == QImage::Format_RGB888
-		|| image.format() == QImage::Format_RGB32
-		|| image.format() == QImage::Format_Indexed8)
-	{
-
-	}
-	else
-	{
-		return -1;
-	}
-	int ret = 0;
-	unsigned char  *image_red = nullptr;
-	unsigned char  *image_green = nullptr;
-	unsigned char  *image_blue = nullptr;
-	int r, c;
-
-	int w = image.width();
-	int h = image.height();
-	try
-	{
-		image_red = (unsigned char  *)malloc(w*h);
-		if (image.format() == QImage::Format_RGB888
-			|| image.format() == QImage::Format_RGB32)
-		{
-			image_green = (unsigned char  *)malloc(w*h);
-			image_blue = (unsigned char  *)malloc(w*h);
-		}
-	}
-	catch (...)
-	{
-		free(image_red);
-		free(image_green);
-		free(image_blue);
-		return -1;
-	}
-
-
-	if (image.format() == QImage::Format_RGB888)
-	{
-		for (r = 0; r < h; r++)
-		{
-			uchar* pRow = image.scanLine(r);
-			for (c = 0; c < w; c++)
-			{
-				image_red[r*w + c] = pRow[3 * c + 0];
-				image_green[r*w + c] = pRow[3 * c + 1];
-				image_blue[r*w + c] = pRow[3 * c + 2];
-			}
-		}
-		GenImage3Extern(Object, "byte", w, h, (Hlong)image_red, (Hlong)image_green, (Hlong)image_blue, (Hlong)free);
-		free(image_red); free(image_green); free(image_blue);
-
-	}
-	else if (image.format() == QImage::Format_RGB32)
-	{
-		for (r = 0; r < h; r++)
-		{
-			uchar* pRow = image.scanLine(r);
-			for (c = 0; c < w; c++)
-			{
-				image_red[r*w + c] = pRow[4 * c + 2];
-				image_green[r*w + c] = pRow[4 * c + 1];
-				image_blue[r*w + c] = pRow[4 * c + 0];
-			}
-		}
-		GenImage3Extern(Object, "byte", w, h, (Hlong)image_red, (Hlong)image_green, (Hlong)image_blue, (Hlong)free);
-	}
-	else if (image.format() == QImage::Format_Indexed8)
-	{
-		for (r = 0; r < h; r++)
-		{
-			uchar* pRow = image.scanLine(r);
-			for (c = 0; c < w; c++)
-			{
-				image_red[r*w + c] = pRow[c];
-				//image_red[r*w + c] = 0.30 * pBmp[3 * (c + r*w) + 0] + 0.59 * pBmp[3 * (c + r*w) + 1] + 0.11 *pBmp[3 * (c + r*w) + 2];
-			}
-		}
-		GenImage1Extern(Object, "byte", w, h, (Hlong)image_red, (Hlong)free);
-	}
-	return ret;
 }
 
 
@@ -201,6 +125,12 @@ int CountAlgorithm::countStart(const QImage& image)
 void CountAlgorithm::DoStart()
 {
 
+}
+
+void CountAlgorithm::completeSet(QVariant &data)
+{
+	qmap["binThreshold"] = data.toMap().value("binThreshold").toInt();
+	qDebug() << "CountAlgorithm completeSet " << qmap["binThreshold"].toInt();
 }
 
 
